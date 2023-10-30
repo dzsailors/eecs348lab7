@@ -1,0 +1,40 @@
+<html>
+    <style>
+        body {background-color: #1f1f1f; color: white;}
+        #paragraph {
+        font-family: Arial, sans-serif;
+        font-size: 18px;
+        line-height: 1.5;
+        color: black;
+        background-color: white;
+        border: 2px solid black;
+        width: 550px;
+        }
+    </style>
+    <body>
+        <div id="paragraph">Enter values below to edit the border and background of this textbox!</div>
+        <script type="text/javascript">
+        function changeStyle() {
+            var borderR = document.getElementById("borderR").value;
+            var borderG = document.getElementById("borderG").value;
+            var borderB = document.getElementById("borderB").value;
+            var borderW = document.getElementById("borderW").value;
+            var backgroundR = document.getElementById("backgroundR").value;
+            var backgroundG = document.getElementById("backgroundG").value;
+            var backgroundB = document.getElementById("backgroundB").value;
+            var tag = document.getElementById("paragraph");
+            tag.style.borderColor = `rgb(${borderR},${borderG},${borderB})`;
+            tag.style.borderWidth = `${borderW}px`;
+            tag.style.backgroundColor = `rgb(${backgroundR},${backgroundG},${backgroundB})`;
+        }
+        </script>
+        Border Color - Red(0-255): <input type="text" id="borderR" value=""><br>
+        Border Color - Green(0-255): <input type="text" id="borderG" value=""><br>
+        Border Color - Blue(0-255): <input type="text" id="borderB" value=""><br>
+        Border Width: <input type="text" id="borderW" value=""><br>
+        Background Color - Red(0-255): <input type="text" id="backgroundR" value=""><br>
+        Background Color - Green(0-255): <input type="text" id="backgroundG" value=""><br>
+        Background Color - Blue(0-255): <input type="text" id="backgroundB" value=""><br>
+        <button onclick="changeStyle()">Apply Changes</button><br>
+    </body>
+</html>
